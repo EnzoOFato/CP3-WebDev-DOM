@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de produtos</title>
+    <style>
+        body{
+            margin: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgb(175, 255, 228);
+        }
+        h1{
+            font-size: 40px;
+            font-style: italic;
+        }
+        .entrada{
+            display: flex;
+            flex-direction: column;
+            height: 15%;
+            width: 50%;
+        }
+        form{
+            width: 80%;
+            height: 60%;
+            background-color: beige;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .produtos {
+            height: 20%;
+            max-height: 100vh;
+            width: 80%;
+            background-color: beige;
+            border: 1px solid black;
+            margin-top: 1em;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        select{
+            height: 50%;
+            font-size: 18px;
+        }
+        button{
+            width: 20%;
+            border-radius: 50px;
+            font-size: 20px;
+            padding: 10px 20px;
+            border: none;
+            background-color: rgb(175, 255, 228);
+        }
+        button:hover{
+            border: 1px solid black;
+            background-color: rgb(140, 248, 212);
+            cursor: pointer;
+        }
+        label{
+            font-size: 20px;
+        }
+        input{
+            height: 100%;
+            font-size: 18px;
+        }
+        option{
+            font-size: 16px;
+        }
+        h2{
+            font-style: normal;
+        }
+        .produto-tec{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cadastro de produtos</h1>
+    <form novalidate id="formulario">
+        <div class="entrada">
+            <label for="nome">Nome produto:</label>
+            <input type="text" id="nome">
+        </div>
+        <div class="entrada">
+            <label for="preco">Preço do produto</label>
+            <input type="number" id="preco" step="0.01">
+        </div>
+        <div class="entrada">
+            <select id="select">
+                <option value="outro">Outro</option>
+                <option value="alimento">Alimento</option>
+                <option value="tec">Tecnologia</option>
+            </select>
+        </div>
+        <button id="btnCadastro">Cadastrar</button>
+    </form>
+    <div class="produtos" id="produtos">
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
